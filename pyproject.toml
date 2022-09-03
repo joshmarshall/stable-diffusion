@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "latent-diffusion"
+version = "0.0.1"
+description = "README.md"
+license = {file="LICENSE"}
+requires-python = ">=3.8"
+dynamic = ["dependencies"]
+
+[tool.setuptools.packages.find]
+include = ["ldm*"]
+
+[tool.setuptools.dynamic]
+dependencies = { file = "requirements.txt"}
+
+[project.urls]
+"Homepage" = "https://github.com/CompVis/stable-diffusion"
