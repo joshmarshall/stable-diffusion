@@ -16,11 +16,11 @@ COPY data /src/data
 COPY ldm /src/ldm
 COPY configs /src/configs
 
-COPY scripts/download_first_stages.sh /src/
-COPY scripts/download_models.sh /src/
+# COPY scripts/download_first_stages.sh /src/
+# COPY scripts/download_models.sh /src/
 
-RUN chmod a+x ./download_*.sh && \
-    ./download_first_stages.sh \
-    ./download_models.sh
+# RUN chmod a+x ./download_*.sh && \
+#     ./download_first_stages.sh \
+#     ./download_models.sh
 
 ENTRYPOINT ["txt2img"]
